@@ -2,35 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FierceBio - Reels Bundles</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bundles Store</title>
+  <style>
+    body { background-color: #121212; color: white; font-family: sans-serif; text-align: center; }
+    .bundle { background: #1f1f1f; margin: 10px; padding: 15px; border-radius: 10px; cursor: pointer; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; flex-direction: column; }
+    .modal img, .modal video { max-width: 90%; max-height: 70vh; margin-bottom: 15px; }
+    .close-btn { cursor: pointer; font-size: 20px; margin-top: 10px; color: red; }
+    .buy-btn { background: #00ffc3; padding: 12px 20px; border-radius: 10px; font-size: 18px; cursor: pointer; color: black; font-weight: bold; margin: 20px 0; }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🔥 FierceBio - Premium Reels Bundles 🔥</h1>
+  <h1>Bundles 🔥</h1>
+  <p>All packs are MCN Protected. No copyright issues.</p>
 
-    <p class="note">All packs are MCN Protected. No copyright issues.</p>
+  <div class="bundle" onclick="openPreview('preview1')">📦 Hindi Stories Bundle Pack - 1</div>
+  <div class="bundle" onclick="openPreview('preview2')">📺 Facebook Movies Bundle Pack - 1</div>
 
-    <div class="bundle-list">
-      <div class="bundle">📦 Hindi Stories Bundle Pack - 1</div>
-      <div class="bundle">📦 Hindi Stories Bundle Pack - 2</div>
-      <div class="bundle">📦 Hindi Stories Bundle Pack - 3</div>
-      <div class="bundle">🎬 Facebook Movies Bundle Pack - 1</div>
-      <div class="bundle">🎬 Facebook Movies Bundle Pack - 2</div>
-      <div class="bundle">🕉️ Sanatan Facts Shorts Bundle Pack</div>
-      <div class="bundle">🏏 Cricket Reels Bundle Pack</div>
-      <div class="bundle">🎭 Anime + Bollywood Reels Bundle Pack</div>
-    </div>
-
-    <a href="assets/gpay-qr.png" class="buy-btn" target="_blank">💸 Buy Now via Google Pay</a>
-
-    <footer>
-      <p>📧 For any inquiry: <a href="mailto:ph.a.nd.ongn.hi1.958.5@gmail.com">Contact Us</a></p>
-      <p class="policy">
-        ⚠️ All content is MCN Protected. We do not promote scams or copyright misuse.
-      </p>
-    </footer>
+  <!-- Preview Modals -->
+  <div id="preview1" class="modal">
+    <img src="sample-previews/sample1.jpg" alt="Sample 1">
+    <div class="close-btn" onclick="closePreview('preview1')">Close</div>
   </div>
+
+  <div id="preview2" class="modal">
+    <video src="sample-previews/sample2.mp4" controls></video>
+    <div class="close-btn" onclick="closePreview('preview2')">Close</div>
+  </div>
+
+  <div class="buy-btn" onclick="showQRCode()">💸 Buy Now via Google Pay</div>
+
+  <!-- QR Modal -->
+  <div id="qrModal" class="modal">
+    <p>Scan and get your product</p>
+    <img src="qrcode/qr-code.png" alt="QR Code">
+    <p>UPI ID: radha85719@oksbi</p>
+    <p><strong>Note:</strong> After payment, please send screenshot of your payment on our contact form or WhatsApp to receive download link.</p>
+    <div class="close-btn" onclick="closePreview('qrModal')">Close</div>
+  </div>
+
+  <script>
+    function openPreview(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closePreview(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    function showQRCode() {
+      openPreview('qrModal');
+    }
+  </script>
 </body>
 </html>
