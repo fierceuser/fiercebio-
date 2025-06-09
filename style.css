@@ -1,65 +1,38 @@
+
 body {
-  background-color: #121212;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: #fdfdfd;
 }
-
-.container {
-  max-width: 700px;
-  margin: auto;
-  padding: 30px;
+header {
+  background: #ff9800;
+  color: white;
   text-align: center;
+  padding: 20px;
 }
-
-h1 {
-  font-size: 2em;
-  color: #00ffe1;
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
-
-.note {
-  margin: 10px 0;
-  font-style: italic;
-  color: #bbbbbb;
-}
-
-.bundle-list {
-  margin-top: 30px;
-  text-align: left;
-}
-
 .bundle {
-  background-color: #1e1e1e;
-  margin: 10px 0;
-  padding: 12px;
+  border: 1px solid #ccc;
+  padding: 10px;
   border-radius: 10px;
-  transition: 0.3s;
-  cursor: pointer;
+  text-align: center;
+  width: 300px;
 }
-
-.bundle:hover {
-  background-color: #272727;
+.bundle img {
+  width: 100%;
+  border-radius: 10px;
 }
-
-.buy-btn {
+.bundle a {
   display: inline-block;
-  margin-top: 25px;
-  background-color: #00ffe1;
-  padding: 14px 25px;
-  color: #000;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  color: #888;
-}
-
-.policy {
-  margin-top: 8px;
-  color: #ccc;
+  border-radius: 5px;
 }
